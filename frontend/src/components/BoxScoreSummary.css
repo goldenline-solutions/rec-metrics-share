@@ -1,0 +1,180 @@
+.box-score-summary {
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.score-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.team-score {
+  text-align: center;
+}
+
+.team-name {
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.final-score {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.vs {
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.quarters-section,
+.team-totals-section,
+.players-section {
+  margin-bottom: 30px;
+}
+
+.quarters-section h3,
+.team-totals-section h3,
+.players-section h3 {
+  font-size: var(--font-size-section-title);
+  margin-bottom: 15px;
+  color: var(--color-text-primary);
+}
+
+.quarters-grid {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  gap: 8px;
+  max-width: 300px;
+}
+
+.quarter-row {
+  display: contents;
+}
+
+.quarter-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.quarter-score {
+  text-align: center;
+  padding: 4px;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-primary);
+  border-radius: 4px;
+}
+
+.team-totals-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.team-totals-card {
+  background-color: var(--color-surface-2);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.team-totals-header {
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
+}
+
+.team-totals-grade {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+
+.team-totals-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.players-column {
+  background-color: var(--color-surface-2);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.players-header {
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.player-row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.player-row:last-child {
+  border-bottom: none;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.player-position {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  font-size: 14px;
+  min-width: 30px;
+}
+
+.player-name {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.player-grade {
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+}
+
+.player-stats {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-left: 38px;
+}
+
+
+/* Phones: the two team columns stack instead of overflowing sideways. */
+@media (max-width: 640px) {
+  .team-totals-grid,
+  .players-grid {
+    grid-template-columns: 1fr;
+  }
+  .score-header { gap: var(--spacing-lg); }
+}

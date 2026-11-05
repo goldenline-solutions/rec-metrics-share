@@ -1,0 +1,33 @@
+/* Extra top spacing so content isn't behind the sticky nav */
+.legal-page .container {
+  padding-top: var(--spacing-lg);
+}
+
+.legal-page .legal-content {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.legal-section {
+  margin-bottom: 2.5rem;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary, #ffffff);
+}
+
+.legal-section p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #ffffff);
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}

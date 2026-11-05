@@ -1,0 +1,427 @@
+/* Landing page – reuses design tokens from index.css */
+
+.landing-page-layout .page-content {
+  padding-top: 0;
+}
+
+.landing-page {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+}
+
+/* Hero */
+.landing-hero {
+  text-align: center;
+  padding: var(--spacing-xl) 0 var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.landing-hero-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--spacing-md);
+  padding: 4px 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+}
+
+.landing-hero-title {
+  /* The hero is Direction A's thesis — the loudest scorebug moment on the
+     site, so it carries the condensed display voice at real scale. */
+  font-family: var(--font-family-display);
+  font-size: clamp(38px, 8vw, 68px);
+  font-weight: var(--display-weight);
+  text-transform: var(--display-transform);
+  letter-spacing: var(--display-tracking);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-md);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+/* Put the accent on the words that name the product's core value. */
+.landing-hero-title .accent {
+  color: var(--color-accent);
+}
+
+.landing-hero-subtext {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-md);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--line-height);
+}
+
+.landing-hero-stats {
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-lg);
+  opacity: 0.9;
+}
+
+.landing-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-cta-primary,
+.landing-cta-secondary {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-cta-primary:hover,
+.landing-cta-secondary:hover {
+  text-decoration: none;
+}
+
+/* Instant access */
+.landing-instant {
+  margin-bottom: var(--spacing-xl);
+}
+
+.landing-instant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .landing-instant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.landing-search-card,
+.landing-mini-card {
+  margin-bottom: 0;
+  /* Grid children default to min-width:auto; a wide input inside then forces
+     the card past the viewport. Let it shrink. */
+  min-width: 0;
+}
+
+.landing-search-card-title,
+.landing-mini-card-title {
+  margin: 0 0 var(--spacing-md);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.landing-search-hint {
+  margin: var(--spacing-sm) 0 0;
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+}
+
+/* Search box */
+.landing-search-wrap {
+  position: relative;
+}
+
+.landing-search-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-body);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+}
+
+.landing-search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+
+.landing-search-loading {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+}
+
+.landing-search-dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0;
+  padding: var(--spacing-xs);
+  list-style: none;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.landing-search-dropdown-item,
+.landing-search-dropdown-empty {
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+}
+
+.landing-search-dropdown-item:hover {
+  background: var(--color-surface-1);
+}
+
+.landing-search-dropdown-empty {
+  color: var(--color-text-secondary);
+  cursor: default;
+}
+
+/* Mini leaderboard */
+.landing-mini-leaderboard {
+  margin-top: var(--spacing-sm);
+}
+
+.landing-mini-leaderboard-error {
+  padding: var(--spacing-md);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.landing-mini-leaderboard-error p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.landing-table-wrap {
+  overflow-x: auto;
+  margin-bottom: var(--spacing-md);
+}
+
+.landing-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-meta);
+}
+
+.landing-mini-table th,
+.landing-mini-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.landing-mini-table th {
+  background: var(--color-surface-2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.landing-mini-table td {
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.landing-mini-table a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.landing-mini-table a:hover {
+  text-decoration: underline;
+}
+
+.landing-mini-empty {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-meta);
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.landing-mini-leaderboard-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.landing-mini-updated {
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+  margin-right: auto;
+}
+
+.landing-view-full {
+  display: inline-block;
+  font-size: var(--font-size-meta);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+}
+
+.landing-view-full:hover {
+  text-decoration: underline;
+}
+
+/* Skeleton */
+.landing-table-skeleton {
+  padding: var(--spacing-sm) 0;
+}
+
+.landing-skeleton-row {
+  height: 36px;
+  margin-bottom: var(--spacing-xs);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  opacity: 0.6;
+}
+
+/* Feature cards */
+.landing-features {
+  margin-bottom: var(--spacing-xl);
+}
+
+.landing-feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .landing-feature-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Builder feature grid — four highlights, the flagship section. The compound
+   selector keeps it winning over the 3-up .landing-feature-cards rules above. */
+.landing-builder-features.landing-feature-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1024px) {
+  .landing-builder-features.landing-feature-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .landing-builder-features.landing-feature-cards { grid-template-columns: 1fr; }
+}
+
+.landing-features-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+.landing-features-cta .landing-cta-primary { text-decoration: none; }
+.landing-features-cta-note {
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+}
+
+.landing-feature-card {
+  margin-bottom: 0;
+}
+
+.landing-feature-card h3 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.landing-feature-card p {
+  margin: 0;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height);
+}
+
+/* Stats & leaderboards — demoted below the builder, visually lighter. */
+.landing-stats-secondary {
+  margin-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.landing-section-lead {
+  margin: 0 0 var(--spacing-lg);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height);
+  max-width: 620px;
+}
+.landing-section-lead a { color: var(--color-accent); }
+
+.landing-stats-line {
+  margin: var(--spacing-md) 0 0;
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+  opacity: 0.9;
+}
+
+/* Community / Discord */
+.landing-community {
+  margin-bottom: var(--spacing-xl);
+}
+
+.landing-community-card {
+  margin-bottom: 0;
+  background: linear-gradient(135deg, var(--color-surface-2) 0%, var(--color-surface-1) 100%);
+  border-color: var(--color-border);
+}
+
+.landing-community-content {
+  max-width: 560px;
+}
+
+.landing-community-lead {
+  margin: 0 0 var(--spacing-md);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  line-height: var(--line-height);
+}
+
+.landing-community-list {
+  margin: 0 0 var(--spacing-lg);
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.landing-community-list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.landing-community-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: #5865f2;
+  color: #fff;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.landing-community-cta:hover {
+  background-color: #4752c4;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+

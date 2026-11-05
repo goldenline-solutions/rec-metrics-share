@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0E1116" />
+
+    <!-- Primary meta. These are the site-wide defaults; per-route pages override
+         title/description/canonical at runtime via react-helmet-async (and at
+         build time via the prerender step). -->
+    <title>RecMetrics — NBA 2K26 Build Planner</title>
+    <meta name="description" content="Plan your perfect NBA 2K26 build with a live overall, soft caps, badges, takeovers, and animations. Start from 270+ template builds, then track your REC stats and leaderboards." />
+    <link rel="canonical" href="https://rec-metrics.com/" />
+
+    <!-- Open Graph (Discord, Facebook, Slack, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RecMetrics" />
+    <meta property="og:title" content="RecMetrics — NBA 2K26 Build Planner" />
+    <meta property="og:description" content="Plan your perfect NBA 2K26 build with a live overall, soft caps, badges, takeovers, and animations. Start from 270+ template builds." />
+    <meta property="og:url" content="https://rec-metrics.com/" />
+    <meta property="og:image" content="https://rec-metrics.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RecMetrics — NBA 2K26 Build Planner" />
+    <meta name="twitter:description" content="Plan your perfect NBA 2K26 build with a live overall, soft caps, badges, takeovers, and animations." />
+    <meta name="twitter:image" content="https://rec-metrics.com/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter = body/UI. Archivo Narrow = the condensed display + data face
+         (scores, stat lines, section headers). Keep these families and weights
+         in sync with frontend/.design-sync/fonts.css, which mirrors this import
+         so designs built from the design system get the same faces. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured data: names the flagship tool + the site for rich results. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://rec-metrics.com/#website",
+          "url": "https://rec-metrics.com/",
+          "name": "RecMetrics",
+          "description": "NBA 2K26 build planner and REC stat tracking.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://rec-metrics.com/players/{search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://rec-metrics.com/#build-planner",
+          "name": "RecMetrics NBA 2K26 Build Planner",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "Web",
+          "url": "https://rec-metrics.com/builds/new",
+          "description": "Plan NBA 2K26 builds with a live overall rating, attribute soft caps, badges, takeovers, animations, and cap breakers. Start from curated template builds.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K31T2NG8M0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // SPA route-change pageviews are sent manually from the app (utils/analytics),
+      // so disable gtag's automatic first-load page_view to avoid double counting.
+      gtag('config', 'G-K31T2NG8M0', { send_page_view: false });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

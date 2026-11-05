@@ -1,0 +1,157 @@
+.tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  cursor: help;
+}
+
+.tooltip-trigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 200;
+  max-width: min(340px, calc(100vw - 16px));
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-meta);
+  line-height: 1.45;
+  pointer-events: none;
+  animation: tooltip-in 0.12s ease-out;
+}
+
+@keyframes tooltip-in {
+  from { opacity: 0; transform: translateY(-2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip { animation: none; }
+}
+
+/* --- shared building blocks for requirement/tier tooltips --- */
+
+.tooltip-title {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--display-transform);
+  letter-spacing: var(--display-tracking);
+  font-size: var(--font-size-body);
+  margin-bottom: 2px;
+}
+
+.tooltip-note {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* One requirement line: label on the left, "have / need" on the right. */
+.tooltip-req {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: 3px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.tooltip-req:first-of-type {
+  border-top: 0;
+}
+
+.tooltip-req-label {
+  color: var(--color-text-secondary);
+}
+
+.tooltip-req-value {
+  font-family: var(--font-family-data);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Unmet requirements read red; met ones read positive. This is the signal the
+   whole tooltip exists for, so it carries weight as well as hue. */
+.tooltip-req.is-unmet .tooltip-req-value,
+.tooltip-req.is-unmet .tooltip-req-label {
+  color: var(--color-negative);
+}
+
+.tooltip-req.is-met .tooltip-req-value {
+  color: var(--color-positive);
+}
+
+.tooltip-status {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  font-weight: var(--font-weight-semibold);
+}
+
+.tooltip-status.is-locked { color: var(--color-negative); }
+.tooltip-status.is-unlocked { color: var(--color-positive); }
+
+/* --- badge tier ladder --- */
+.tooltip-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+/* Tier chips carry the TIER's own colour, not a met/unmet semantic colour —
+   in 2K the colour IS the tier, so a reached Legend must read as Legend red,
+   never as generic green. Unreached tiers desaturate to the muted neutral, so
+   the ladder reads as "how far up have I climbed" at a glance. */
+.tooltip-tier {
+  font-family: var(--font-family-data);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  opacity: 0.55;
+}
+
+.tooltip-tier.is-met {
+  opacity: 1;
+}
+
+.tooltip-tier.is-met.tier-legend {
+  color: var(--color-tier-legend);
+  border-color: var(--color-tier-legend);
+  background: rgba(248, 113, 113, 0.15);
+}
+
+.tooltip-tier.is-met.tier-hof {
+  color: var(--color-tier-hof);
+  border-color: var(--color-tier-hof);
+  background: rgba(192, 132, 252, 0.15);
+}
+
+.tooltip-tier.is-met.tier-gold {
+  color: var(--color-tier-gold);
+  border-color: var(--color-tier-gold);
+  background: rgba(250, 204, 21, 0.15);
+}
+
+.tooltip-tier.is-met.tier-silver {
+  color: var(--color-tier-silver);
+  border-color: var(--color-tier-silver);
+  background: rgba(195, 202, 214, 0.15);
+}
+
+.tooltip-tier.is-met.tier-bronze {
+  color: var(--color-tier-bronze);
+  border-color: var(--color-tier-bronze);
+  background: rgba(198, 138, 78, 0.15);
+}

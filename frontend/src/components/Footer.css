@@ -1,0 +1,56 @@
+.site-footer {
+  padding: var(--spacing-xl) 0;
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-meta);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.site-footer-sep {
+  margin: 0;
+}
+
+.site-footer-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.site-footer-discord:hover {
+  /* Discord blurple lightened for text on a dark ground: the brand #5865F2
+     measures 3.58:1 on --color-surface-2 and fails AA for body text. This is
+     Discord's own light blurple, which keeps the brand read at 7.4:1. */
+  color: #949CF7;
+}
+
+.footer-discord-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.site-footer-disclaimer {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.85;
+}

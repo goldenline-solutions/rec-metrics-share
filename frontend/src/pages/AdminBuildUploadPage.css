@@ -1,0 +1,35 @@
+.admin-build-upload-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.uploaded-build-info {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.uploaded-build-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.uploaded-build-info p {
+  margin: 5px 0;
+}

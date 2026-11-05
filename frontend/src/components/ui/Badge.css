@@ -1,0 +1,57 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.badge-default {
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.badge-positive {
+  background: rgba(95, 203, 136, 0.15);
+  color: var(--color-positive);
+}
+
+.badge-negative {
+  background: rgba(236, 107, 98, 0.15);
+  color: var(--color-negative);
+}
+
+.badge-warning {
+  background: rgba(232, 178, 58, 0.15);
+  color: var(--color-warning);
+}
+
+/* Badge tier variants — used for NBA 2K badge levels, where the color IS the
+   tier and must stay distinguishable at a glance. Kept separate from the
+   semantic variants above so "Legend" never reads as an error state. */
+.badge-tier-legend {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--color-tier-legend);
+}
+
+.badge-tier-hof {
+  background: rgba(192, 132, 252, 0.16);
+  color: var(--color-tier-hof);
+}
+
+.badge-tier-gold {
+  background: rgba(250, 204, 21, 0.15);
+  color: var(--color-tier-gold);
+}
+
+.badge-tier-silver {
+  background: rgba(195, 202, 214, 0.14);
+  color: var(--color-tier-silver);
+}
+
+.badge-tier-bronze {
+  background: rgba(198, 138, 78, 0.18);
+  color: var(--color-tier-bronze);
+}

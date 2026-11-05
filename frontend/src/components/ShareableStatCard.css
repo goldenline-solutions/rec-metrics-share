@@ -1,0 +1,85 @@
+.shareable-stat-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shareable-stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 32px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.stat-card-headline {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.stat-card-stat {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.stat-card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.95;
+  margin-bottom: 12px;
+}
+
+.stat-card-footnote {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.stat-card-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat-card-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat-card-button-link {
+  background-color: #667eea;
+  color: white;
+}
+
+.stat-card-button-link:hover {
+  background-color: #5568d3;
+}
+
+.stat-card-button-download {
+  background-color: #764ba2;
+  color: white;
+}
+
+.stat-card-button-download:hover {
+  background-color: #653a8a;
+}
+
+.stat-card-button:active {
+  transform: scale(0.98);
+}
+

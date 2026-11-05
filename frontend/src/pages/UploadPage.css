@@ -1,0 +1,44 @@
+.upload-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.upload-section {
+  background: var(--color-surface-1);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-disclaimer {
+  margin: 0 0 16px 0;
+  padding: 12px 14px;
+  background: #f0f7ff;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-text-primary) !important;
+}
+
+.upload-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.warning-message ul {
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.warning-message li {
+  margin-bottom: 4px;
+}
+

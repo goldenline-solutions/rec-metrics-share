@@ -1,0 +1,99 @@
+.games-filters {
+  margin-bottom: var(--spacing-lg);
+}
+
+.filters-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.filter-group label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.games-count {
+  margin-left: auto;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+}
+
+.games-table-container {
+  margin-top: var(--spacing-md);
+  overflow-x: auto;
+}
+
+.games-table-container table tbody tr:hover {
+  background: var(--color-surface-1) !important;
+}
+
+.score-cell {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+/* Edit hover color */
+.games-table-container a:hover {
+  color: var(--color-text-primary);
+}
+.score-with-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: #ffffff;
+}
+
+.warning-icon {
+  color: var(--color-warning);
+  font-size: 16px;
+  cursor: help;
+}
+
+.error-icon {
+  color: var(--color-negative);
+  font-size: 16px;
+  cursor: help;
+}
+
+/* Pagination */
+.games-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+  flex-wrap: wrap;
+}
+
+.games-page-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.games-page-selector label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.games-page-selector select {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid var(--color-border, rgba(255, 255, 255, 0.2));
+  background: var(--color-surface-0, #1a1d24);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  min-width: 5ch;
+}

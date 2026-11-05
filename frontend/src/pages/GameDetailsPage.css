@@ -1,0 +1,57 @@
+/* Make game details page wider - 75% of viewport width */
+.game-details-page .container {
+  max-width: 75vw;
+}
+
+/* Make navigation match the wider width */
+.game-details-page .navigation .navigation-content {
+  max-width: 75vw;
+}
+
+.game-details-back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.game-details-back-link:hover {
+  text-decoration: underline;
+}
+
+.game-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-details-content .box-score-summary .quarters-section .quarters-grid .quarter-score {
+  color: var(--color-text-primary) !important;
+}
+
+.game-details-content .box-score-summary .team-totals-section .team-totals-grid .team-totals-card .team-totals-stats {
+  color: var(--color-text-primary) !important;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.game-info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.game-info strong {
+  color: #ffffff;
+}
+
+.game-details-content .player-table tbody tr td {
+  color: var(--color-text-primary) !important;
+}
+
+.gamertag-cell {
+  color: #ffffff !important;
+}

@@ -1,0 +1,161 @@
+.claims-page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.claims-actions {
+  margin-bottom: 20px;
+}
+
+.create-claim-form {
+  background: var(--color-surface-2);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.create-claim-form .form-group {
+  margin-bottom: 15px;
+}
+
+.create-claim-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.create-claim-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.claims-list {
+  display: grid;
+  gap: 20px;
+}
+
+.claim-card {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.claim-card.status-verified {
+  border-left: 4px solid #4caf50;
+}
+
+.claim-card.status-unverified {
+  border-left: 4px solid #ff9800;
+}
+
+.claim-card.status-rejected {
+  border-left: 4px solid #f44336;
+}
+
+.claim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.claim-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-badge.status-verified {
+  background: var(--color-positive);
+  color: white;
+}
+
+.status-badge.status-unverified {
+  background: #ff9800;
+  color: white;
+}
+
+.status-badge.status-rejected {
+  background: #f44336;
+  color: white;
+}
+
+.claim-details {
+  margin-bottom: 15px;
+}
+
+.claim-details p {
+  margin: 8px 0;
+  color: var(--color-text-secondary);
+}
+
+.claim-actions {
+  margin-top: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+}
+
+.error-message {
+  background: #ffebee;
+  color: var(--color-negative);
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+}
+
+.btn-secondary {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #f57c00;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

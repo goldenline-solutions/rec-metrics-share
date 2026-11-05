@@ -1,0 +1,65 @@
+/* Extra top spacing so content isn't behind the sticky nav */
+.contact-page .container {
+  padding-top: var(--spacing-lg);
+}
+
+.contact-page .contact-content {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.contact-discord-cta {
+  background: var(--color-surface-2, #f5f5f5);
+  border: 1px solid var(--color-border, var(--color-border));
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-discord-heading {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-primary, #ffffff);
+}
+
+.contact-discord-desc {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  color: var(--color-text-secondary, #ffffff);
+}
+
+.contact-discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #5865F2;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.contact-discord-link:hover {
+  background: #4752c4;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.contact-discord-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+.contact-content p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #ffffff);
+}
+
+.contact-content p:last-child {
+  margin-bottom: 0;
+}

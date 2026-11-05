@@ -1,0 +1,34 @@
+/frontend/node_modules
+/backend/venv
+/backend/uploads
+/backend/app.db
+/backend/api_requests.log
+/backend/__pycache__
+/backend/logs
+/backend/screenshots
+/backend/.env
+frontend/.env.production
+
+.cursorignore
+backend/.env
+
+# 2KCV binaries + network captures — third-party assets, never redistribute.
+# See build_planner/CLAUDE.md "Ethical Stance".
+build_planner/files/
+build_planner/files-2k27/
+build_planner/js-2k27/
+build_planner/captures/
+backend/backups/
+
+# Secrets, logs, caches, scratch output
+discord-bot/.env
+frontend/.env.production
+*.log
+*.log.[0-9]*
+__pycache__/
+build_planner/logs/
+build_planner/tools/emu/out/
+build_planner/2k27 build tests/
+discord-bot/.env
+discord-bot/node_modules/
+frontend/dist/

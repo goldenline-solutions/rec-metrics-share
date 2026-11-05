@@ -1,0 +1,112 @@
+/* ===========================================================================
+   Responsive tables — card-per-row below the lg breakpoint (1024px).
+   ---------------------------------------------------------------------------
+   A wide stat table is unreadable on a phone. Rather than a separate mobile
+   component per table, any table that opts in — by carrying the `.rtable`
+   class and giving each <td> a `data-label` — collapses into one card per row,
+   with each cell shown as a label/value pair.
+
+   Above the breakpoint the table renders normally (its own stylesheet still
+   owns its desktop look). The wrapper keeps horizontal-scroll as the fallback
+   for the band between "too wide to fit" and "narrow enough to card".
+
+   Usage:
+     <div class="rtable-wrap">
+       <table class="rtable">
+         <thead>…</thead>
+         <tbody>
+           <tr><td data-label="PTS">21</td>…</tr>
+   =========================================================================== */
+
+.rtable-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1024px) {
+  .rtable {
+    min-width: 0 !important;   /* override per-table desktop min-widths */
+    border: 0;
+    background: transparent;
+  }
+
+  .rtable thead {
+    /* Header labels move onto each cell via data-label — hide the row, but
+       keep it in the accessibility tree. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .rtable,
+  .rtable tbody,
+  .rtable tr,
+  .rtable td {
+    display: block;
+    width: auto;
+  }
+
+  /* Each row becomes a card. */
+  .rtable tbody tr {
+    background: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs) var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .rtable tbody tr:hover {
+    background: var(--color-surface-1);
+  }
+
+  /* Each cell: label pulled from data-label on the left, value on the right. */
+  .rtable td {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: 6px 0 !important;
+    border: 0;
+    border-bottom: 1px solid var(--color-border) !important;
+    text-align: right;
+    font-size: var(--font-size-body);
+  }
+
+  .rtable tbody tr td:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .rtable td::before {
+    content: attr(data-label);
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: var(--font-size-meta);
+    color: var(--color-text-secondary);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  /* A cell with no label (e.g. an actions cell) spans full width, no gutter. */
+  .rtable td[data-label=""]::before,
+  .rtable td:not([data-label])::before {
+    content: none;
+  }
+
+  /* Let a "primary" cell (usually the name) read as the card's heading. */
+  .rtable td.rtable-primary {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-section-title);
+    text-transform: uppercase;
+    letter-spacing: var(--display-tracking);
+  }
+
+  .rtable td.rtable-primary::before {
+    content: none;
+  }
+}

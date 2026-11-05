@@ -1,0 +1,119 @@
+.leaderboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.leaderboard-controls {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  /* Was flex-shrink: 0, which — with min-width:140px controls and a nowrap
+     label — pushed the last control outside the card on narrow screens. */
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.leaderboard-controls .control-group label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* Phones: label above control, each group full width, so nothing overflows. */
+@media (max-width: 640px) {
+  .leaderboard-controls {
+    gap: var(--spacing-md);
+  }
+
+  .control-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-xs);
+    width: 100%;
+  }
+
+  .leaderboard-controls .control-group label {
+    text-align: left;
+  }
+
+  .stat-select,
+  .position-select,
+  .platform-select,
+  .min-games-input {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.stat-select,
+.position-select,
+.platform-select,
+.min-games-input {
+  min-width: 140px;
+  color: var(--color-text-primary);
+  background: var(--color-surface-1);
+}
+
+.min-games-input {
+  width: 80px;
+  min-width: 80px;
+}
+
+.leaderboard-subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  margin-left: var(--spacing-sm);
+}
+
+.leaderboard-table {
+  width: 100%;
+  min-width: 800px;
+}
+
+.rank-cell {
+  text-align: center;
+  width: 60px;
+}
+
+.player-cell {
+  font-weight: var(--font-weight-medium);
+}
+
+.stat-value-cell {
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-value-cell strong {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.leaderboard-error-card .error-message {
+  margin: 0;
+}
+
+.leaderboard-skeleton {
+  padding: var(--spacing-sm) 0;
+}
+
+.leaderboard-skeleton-row {
+  height: 40px;
+  margin-bottom: var(--spacing-xs);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  opacity: 0.6;
+}

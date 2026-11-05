@@ -1,0 +1,39 @@
+.player-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.player-table {
+  min-width: 1000px;
+}
+
+.player-table th {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.player-table td {
+  font-size: 13px;
+}
+
+.gamertag-cell {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.away-player {
+  background-color: rgba(255, 107, 26, 0.06);
+}
+
+.home-player {
+  background-color: rgba(236, 107, 98, 0.06);
+}
+
+.away-player:hover {
+  background-color: rgba(255, 107, 26, 0.14);
+}
+
+.home-player:hover {
+  background-color: rgba(236, 107, 98, 0.14);
+}
+

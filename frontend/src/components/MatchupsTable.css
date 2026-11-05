@@ -1,0 +1,14 @@
+.matchups-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.matchups-table {
+  min-width: 600px;
+}
+
+.gamertag-cell {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+

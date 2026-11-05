@@ -1,0 +1,481 @@
+{
+  "_about": "Catalog of every MyNBA gameplan setting a GM can submit. Source of truth for the gameplan hub (backend validation, website dropdowns, Discord bot). options[].seen = read off a real 2K screenshot; false = a guess still to confirm. Filled in via the 'MyNBA Gameplan Options' artifact, then copied back here (2026-10-05, all 21 checked by the commissioner).",
+  "version": 2,
+  "sections": [
+    {
+      "key": "rotation",
+      "label": "Rotations",
+      "order": 1
+    },
+    {
+      "key": "coaching",
+      "label": "Coaching",
+      "order": 2
+    },
+    {
+      "key": "emphasis",
+      "label": "Sim Points of Emphasis",
+      "order": 3
+    },
+    {
+      "key": "league",
+      "label": "League rules",
+      "order": 4
+    }
+  ],
+  "settings": [
+    {
+      "key": "roster_size",
+      "section": "league",
+      "label": "Roster size",
+      "kind": "number",
+      "value": 8,
+      "setBy": "commish",
+      "order": 1,
+      "notes": "2 untouchables (can't be traded)."
+    },
+    {
+      "key": "untouchables",
+      "section": "league",
+      "label": "Untouchables per team",
+      "kind": "number",
+      "value": 2,
+      "setBy": "commish",
+      "order": 2,
+      "notes": ""
+    },
+    {
+      "key": "total_minutes",
+      "section": "rotation",
+      "label": "Total team minutes",
+      "kind": "number",
+      "value": 240,
+      "setBy": "commish",
+      "order": 1,
+      "notes": "2K shows 'Remaining Minutes: 0' when the rotation adds up."
+    },
+    {
+      "key": "max_player_minutes",
+      "section": "rotation",
+      "label": "Max minutes per player",
+      "kind": "number",
+      "value": 48,
+      "setBy": "commish",
+      "order": 2,
+      "notes": ""
+    },
+    {
+      "key": "sixth_man_min",
+      "section": "rotation",
+      "label": "6th man minimum MPG",
+      "kind": "number",
+      "value": 20,
+      "setBy": "commish",
+      "order": 3,
+      "notes": "Rotation slot 6."
+    },
+    {
+      "key": "bench_min",
+      "section": "rotation",
+      "label": "Slots 7–8 minimum MPG",
+      "kind": "number",
+      "value": 10,
+      "setBy": "commish",
+      "order": 4,
+      "notes": ""
+    },
+    {
+      "key": "help_defense",
+      "section": "coaching",
+      "label": "Help Defense",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 1,
+      "notes": ""
+    },
+    {
+      "key": "run_plays_frequency",
+      "section": "coaching",
+      "label": "Run Plays Frequency",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 2,
+      "notes": ""
+    },
+    {
+      "key": "zone_usage_frequency",
+      "section": "coaching",
+      "label": "Zone Usage Frequency",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 3,
+      "notes": ""
+    },
+    {
+      "key": "bench_depth",
+      "section": "coaching",
+      "label": "Bench Depth",
+      "kind": "slider",
+      "min": 5,
+      "max": 15,
+      "setBy": "gm",
+      "order": 4,
+      "notes": "Confirmed 5-15 in 2K."
+    },
+    {
+      "key": "bench_utilization",
+      "section": "coaching",
+      "label": "Bench Utilization",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 5,
+      "notes": ""
+    },
+    {
+      "key": "lineup_performance_factor",
+      "section": "coaching",
+      "label": "Lineup Performance Factor",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 6,
+      "notes": ""
+    },
+    {
+      "key": "young_old",
+      "section": "coaching",
+      "label": "Young - Old",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 7,
+      "notes": ""
+    },
+    {
+      "key": "system_proficiency_preference",
+      "section": "coaching",
+      "label": "System Proficiency Preference",
+      "kind": "slider",
+      "min": 0,
+      "max": 100,
+      "setBy": "gm",
+      "order": 8,
+      "notes": "This is the 'system proficiency' item from the gameplan list."
+    },
+    {
+      "key": "playbook",
+      "section": "coaching",
+      "label": "Playbook",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 9,
+      "notes": "",
+      "options": [
+        {
+          "name": "76ers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Bucks Playbook",
+          "seen": true
+        },
+        {
+          "name": "Bulls Playbook",
+          "seen": true
+        },
+        {
+          "name": "Cavaliers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Celtics Playbook",
+          "seen": true
+        },
+        {
+          "name": "Clippers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Grizzlies Playbook",
+          "seen": true
+        },
+        {
+          "name": "Hawks Playbook",
+          "seen": true
+        },
+        {
+          "name": "Heat Playbook",
+          "seen": true
+        },
+        {
+          "name": "Hornets Playbook",
+          "seen": true
+        },
+        {
+          "name": "Jazz Playbook",
+          "seen": true
+        },
+        {
+          "name": "Kings Playbook",
+          "seen": true
+        },
+        {
+          "name": "Knicks Playbook",
+          "seen": true
+        },
+        {
+          "name": "Lakers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Magic Playbook",
+          "seen": true
+        },
+        {
+          "name": "Mavericks Playbook",
+          "seen": true
+        },
+        {
+          "name": "Nets Playbook",
+          "seen": true
+        },
+        {
+          "name": "Nuggets Playbook",
+          "seen": true
+        },
+        {
+          "name": "Pacers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Pelicans Playbook",
+          "seen": true
+        },
+        {
+          "name": "Pistons Playbook",
+          "seen": true
+        },
+        {
+          "name": "Raptors Playbook",
+          "seen": true
+        },
+        {
+          "name": "Rockets Playbook",
+          "seen": true
+        },
+        {
+          "name": "Spurs Playbook",
+          "seen": true
+        },
+        {
+          "name": "Suns Playbook",
+          "seen": true
+        },
+        {
+          "name": "Thunder Playbook",
+          "seen": true
+        },
+        {
+          "name": "Timberwolves Playbook",
+          "seen": true
+        },
+        {
+          "name": "Trail Blazers Playbook",
+          "seen": true
+        },
+        {
+          "name": "Warriors Playbook",
+          "seen": true
+        },
+        {
+          "name": "Wizards Playbook",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "offensive_focus",
+      "section": "emphasis",
+      "label": "Offensive Focus",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 1,
+      "notes": "",
+      "options": [
+        {
+          "name": "Pick & Roll Offense",
+          "seen": true
+        },
+        {
+          "name": "Neutral Offensive Focus",
+          "seen": true
+        },
+        {
+          "name": "Play Through Star",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        },
+        {
+          "name": "Get To The Basket",
+          "seen": true
+        },
+        {
+          "name": "Get Shooters Open",
+          "seen": true
+        },
+        {
+          "name": "Feed The Post",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "offensive_tempo",
+      "section": "emphasis",
+      "label": "Offensive Tempo",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 2,
+      "notes": "",
+      "options": [
+        {
+          "name": "Shoot At Will",
+          "seen": true
+        },
+        {
+          "name": "Patient Offense",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        },
+        {
+          "name": "Average Tempo",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "offensive_rebounding",
+      "section": "emphasis",
+      "label": "Offensive Rebounding",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 3,
+      "notes": "",
+      "options": [
+        {
+          "name": "Crash Offensive Glass",
+          "seen": true
+        },
+        {
+          "name": "Some Crash, Others Get Back",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        },
+        {
+          "name": "Limit Transition",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "defensive_focus",
+      "section": "emphasis",
+      "label": "Defensive Focus",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 4,
+      "notes": "",
+      "options": [
+        {
+          "name": "Protect The Paint",
+          "seen": true
+        },
+        {
+          "name": "Limit Perimeter Shots",
+          "seen": true
+        },
+        {
+          "name": "Neutral Defensive Focus",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "defensive_aggression",
+      "section": "emphasis",
+      "label": "Defensive Aggression",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 5,
+      "notes": "",
+      "options": [
+        {
+          "name": "Play Physical Defense",
+          "seen": true
+        },
+        {
+          "name": "Conservative Defense",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        },
+        {
+          "name": "Neutral Defensive Aggression",
+          "seen": true
+        }
+      ]
+    },
+    {
+      "key": "defensive_rebounding",
+      "section": "emphasis",
+      "label": "Defensive Rebounding",
+      "kind": "choice",
+      "setBy": "gm",
+      "order": 6,
+      "notes": "",
+      "options": [
+        {
+          "name": "Some Crash, Others Run",
+          "seen": true
+        },
+        {
+          "name": "Crash Defensive Glass",
+          "seen": true
+        },
+        {
+          "name": "Run In Transition",
+          "seen": true
+        },
+        {
+          "name": "No Preference",
+          "seen": true
+        }
+      ]
+    }
+  ]
+}

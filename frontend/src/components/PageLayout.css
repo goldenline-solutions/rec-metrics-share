@@ -1,0 +1,41 @@
+.page-layout {
+  min-height: 100vh;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-layout-body {
+  flex: 1;
+  /* .container centres itself with `margin: 0 auto`. Auto cross-axis margins
+     suppress flex stretching, so without an explicit width this column
+     shrink-wraps to its content instead of filling the page. */
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  font-size: var(--font-size-page-title);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.page-header-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.page-content {
+  /* Content area */
+}

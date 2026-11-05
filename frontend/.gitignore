@@ -1,0 +1,11 @@
+
+# design-sync (staged converter + generated output)
+.ds-sync/
+ds-bundle/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
+
+# local env overrides
+.env.local
+.env*.local

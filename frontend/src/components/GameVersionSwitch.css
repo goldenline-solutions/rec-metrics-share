@@ -1,0 +1,73 @@
+/* Segmented 2K26 / 2K27 toggle.
+   Sits inside filter rows next to the platform/position selects, so it borrows
+   their label typography and matches the height of a native select. */
+
+.game-version-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.game-version-label {
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.game-version-options {
+  display: inline-flex;
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-2);
+}
+
+.game-version-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+/* The real controls: visually hidden, still focusable and announced. */
+.game-version-option input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.game-version-option:hover {
+  color: var(--color-text-primary);
+}
+
+.game-version-option.active {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.game-version-option:has(input:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .game-version-option {
+    padding: 8px 12px;
+  }
+}

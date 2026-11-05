@@ -1,0 +1,10 @@
+# RecMetrics — https://rec-metrics.com
+User-agent: *
+Allow: /
+
+# Internal/admin views carry no SEO value and shouldn't be crawled.
+Disallow: /admin/
+Disallow: /claims
+Disallow: /unresolved
+
+Sitemap: https://rec-metrics.com/sitemap.xml
